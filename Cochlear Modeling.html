@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Cochlear Modeling</title>
+		<link rel="stylesheet" href="styles.css" type="text/css" />
+	</head>
+	<body>
+		<table summary="Table for page layout." id="tlayout">
+			<tr valign="top">
+				<td id="layout-menu">
+					<div class="menu-category"><b>Maurice&nbsp;Filo</b></div>
+					<div class="menu-item"><a href="index.html">Home</a></div>
+					<div class="menu-item"><a href="Contact.html">Contact</a></div>
+					<div class="menu-item"><a href="Biography.html">Biography</a></div>
+					<div class="menu-item"><a href="CV/My_CV.pdf">CV</a></div>
+					<div class="menu-category"><b>Research</b></div>
+					<div class="menu-item"><a href="Biomolecular Controllers.html">Biomolecular Controllers</a></div>
+					<div class="menu-item"><a href="Cochlear Modeling.html">Cochlear Modeling</a></div>
+					<div class="menu-item"><a href="Machine Learning.html">Machine Learning</a></div>
+					<div class="menu-item"><a href="Stochastic Uncertainty.html">Stochastic Uncertainty</a></div>
+					<div class="menu-item"><a href="Optimal Control.html">Optimal Control</a></div>
+					<div class="menu-item"><a href="Publications.html">Publications List</a></div>
+					<div class="menu-item"><a href="Talks.html">Talks</a></div>
+					<div class="menu-item"><a href="https://scholar.google.com/citations?hl=en&user=iaeMS58AAAAJ">Google Scholar</a></div>
+					<div class="menu-category"><b>Teaching</b></div>
+					<div class="menu-item"><a href="Dynamical Systems.html">Dynamical Systems (ETH)</a></div>
+					<div class="menu-item"><a href="Advanced Bioengineering.html">Advanced Bioengineering (ETH)</a></div>
+					<div class="menu-item"><a href="Control Systems II.html">Control Systems II (Ashesi)</a></div>
+					<div class="menu-category"><b>Software</b></div>
+					<div class="menu-item"><a href="Biomolecular Controllers App.html">Biomolecular Controllers App</a></div>
+					<div class="menu-item"><a href="Optimization.html">Optimization</a></div>
+					<div class="menu-item"><a href="Cochlear Simulator.html">Cochlea Simulator</a></div>
+				</td>
+				<td id="layout-content">
+					<div id="toptitle"><h1>Cochlear Modeling</h1></div>
+					
+					<div class="infoblock">
+						<table style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: none;">
+							<tr valign="top">
+								<td style="border: none;"><img src="Icons_Papers/ear.gif" alt="alt text" height="200px" class="centered-image"/> </td>
+								<td style="border: none;"><img src="Icons_Papers/cochlea_simulation.gif" alt="alt text" height="200px" class="centered-image"/></td>
+							</tr>
+						</table>
+						
+						<p style="margin-top: 20px;"> The cochlea, or inner ear, is a highly sensitive organ capable of detecting sound frequencies ranging from 20 to 20,000 Hz and sound intensities from 0 dB (the threshold of hearing) to 120 dB (similar to the sound of a jet engine). This remarkable biomechanical sound sensor acts as a <b> frequency analyzer where each location on the basilar membrane vibrates in response to specific sound frequencies </b>. This results in a frequency-to-location mapping, with each stimulus frequency having a corresponding location on the BM. As such, <b>the unrolled cochlea acts like an "inverse piano", where each location (akin to a key being played) corresponds to a specific frequency </b>.
+						</p>
+							
+						<img src="Research Summaries/Cochlear Modeling/Uncoiled Cochlea.png" alt="alt text" height="300px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						
+						<p style="margin-top: 20px;">Historically, the cochlea was thought to function as a passive device, a theory proposed by Nobel laureate Georg von Békésy based on his studies with human cadavers. However, in 1948, Thomas Gold suggested that the cochlea is actually an active device, which enhances its sound detection capabilities through a mechanism later identified as the cochlear amplifier. Although initially rejected by von Békésy, Gold’s theory was validated three decades later by David Kemp through the discovery of otoacoustic emissions—sounds emitted by the cochlea and detectable in the ear canal. Indeed, <b> the ear does not just receive sound, it also produces noise!</b>
+						</p>
+						
+						<p style="margin-bottom: 20px;"> Nonlinear mechanical interactions in the cochlea lead to various dynamic phenomena, including frequency mixing, detuning, and amplification. Here's an intriguing demonstration you can experience now. First, listen to a single tone with a fixed frequency (video to the left). Our simulation shows a dominant vibration at one specific location on the membrane that corresponds to that single frequency. Next, listen to a tone that gradually increases in frequency (middle video). You will observe the dominant vibrations on the membrane shifting to the left. Now, what happens if we combine the two: a fixed frequency and a swept frequency? Do you hear both, and only both? If you answered yes, you'd be mistaken. <b> You actually hear an additional frequency that doesn't physically exist!</b> Our simulation (video to the right) shows this "phantom" frequency that seemingly appears out of nowhere and moves in the opposite direction. This extra frequency is known as the cubic difference tone. Makes you think about how we perceive reality ...
+						</p>
+						
+						<table style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: none;">
+							<td style="border: none;"> 
+								<video class="video-class" controls>
+    								<source src="Research Summaries/Cochlear Modeling/Fixed.mp4" type="video/mp4">
+    								Your browser does not support the video tag.
+								</video>
+							</td>
+							
+							<td style="border: none; vertical-align: middle;"> 
+								+
+							</td>
+							
+							<td style="border: none;"> 
+								<video class="video-class" controls>
+    								<source src="Research Summaries/Cochlear Modeling/Chirp.mp4" type="video/mp4">
+    								Your browser does not support the video tag.
+								</video>
+							</td>
+							
+							<td style="border: none; vertical-align: middle;"> 
+								=
+							</td>
+							
+							<td style="border: none;"> 
+								<video class="video-class" controls>
+    								<source src="Research Summaries/Cochlear Modeling/Mixed.mp4" type="video/mp4">
+    								Your browser does not support the video tag.
+								</video>
+							</td>
+						</table>
+						
+						<p style="margin-top: 20px;"> Here's a simple MATLAB code that generates the sounds.
+						</p>
+						
+						<pre class="matlab-style">Fs = 44100;<span class="matlab-comment"> % Sampling Frequency </span> 
+dt = 1 / Fs;<span class="matlab-comment"> % Sampling Period </span> 
+tf = 2;<span class="matlab-comment"> % Final Time </span>
+t = 0 : dt : tf;<span class="matlab-comment"> % Time Horizon </span>
+Signal_1 = 0.5*sin(2*pi*1000*t);<span class="matlab-comment"> % Single Tone with Fixed Frequency </span>
+Signal_2 = 0.5*chirp(t, 1000, tf, 1800); <span class="matlab-comment"> % Single Tone with Moving Frequency </span>
+Signal_3 = Signal_1 + Signal_2;
+sound(Signal_1, Fs); pause(); <span class="matlab-comment"> % Play Signal 1 </span>
+sound(Signal_2, Fs); pause(); <span class="matlab-comment"> % Play Signal 2 </span>
+sound(Signal_3, Fs);<span class="matlab-comment"> % Play Signal 3 </span>
+</pre>
+						
+						<p style="margin-top: 20px;"> We refine a mathematical model of the middle and inner ear by incorporating stochastic effects common to biological systems. The model consists of (1) a partial differential equation to describe the <b>fluid dynamics</b>, (2) an <b>array of coupled oscillators</b> to simulate the micromechanics on the basilar membrane at each location x, and (3) a <b>nonlinear amplifier</b> to model the active dynamics of outer hair cells (OHC) on the membrane. The stochastic noise enters the dynamics as a spatio-temporal gain in the amplifier.
+						</p>
+							
+						<table style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: none;">
+							<tr valign="top">
+								<td style="border: none;"><img src="Research Summaries/Cochlear Modeling/model.png" alt="alt text" height="400px" class="centered-image" style="border:0px solid #000; margin-top:10px"/> </td>
+							</tr>
+						</table> 
+					
+						<p style="margin-top: 20px;"> Through analysis of this enhanced model, we succeeded in: </p>
+
+						<p> 1. Developing a <b>reduced model</b> that is computationally efficient. A future goal is to use the reduced model in biologically-aware audio signal processing and generation. </p>
+						<table style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: none;">
+							<tr valign="top">
+								<td style="border: none;"><img src="Research Summaries/Cochlear Modeling/model_reduction.png" alt="alt text" height="400px" class="centered-image" style="border:0px solid #000; margin-top:10px"/> </td>
+							</tr>
+						</table>
+						<p> 2. Investigating the stability implications of <b>nonsmooth profiles</b> on the membrane. </p>
+						<table style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: none;">
+							<tr valign="top">
+								<td style="border: none;"><img src="Research Summaries/Cochlear Modeling/discont.png" alt="alt text" height="400px" class="centered-image" style="border:0px solid #000; margin-top:10px"/> </td>
+							</tr>
+						</table>
+						<p> 3. Investigating <b>stability in response to stochastic perturbations</b>. These instabilities might underly the known phenomenon called otoacoustic emissions or even tinitus. </p>
+						<table style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: none;">
+							<tr valign="top">
+								<td style="border: none;"><img src="Research Summaries/Cochlear Modeling/stoch_instability.png" alt="alt text" height="400px" class="centered-image" style="border:0px solid #000; margin-top:10px"/> </td>
+							</tr>
+						</table>
+						<p> 4. Perform a <b>dynamic mode decomposition</b> to identify the vibration modes of the membrane for each stimulus frequency.</p>
+						<table style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: none;">
+							<tr valign="top">
+								<td style="border: none;"><img src="Research Summaries/Cochlear Modeling/DMD.png" alt="alt text" height="400px" class="centered-image" style="border:0px solid #000; margin-top:10px"/> </td>
+							</tr>
+						</table>
+						
+						<p> References: </p>
+						<p>
+						<ul>
+  							<li><a href="https://ieeexplore.ieee.org/abstract/document/9090851?casa_token=g_niKU1Q1CwAAAAA:7d-HA-tM20ByAErYgyUSj5KM6cBSqA8i2voU9Z8p1Gh-F6sHQ3mX1v46NmnuaYrkAg8L9aQUaw">Filo, Maurice, and Bassam Bamieh. "Investigating Instabilities in the Mammalian Cochlea Using a Stochastic Uncertainty Model." IEEE Transactions on Molecular, Biological and Multi-Scale Communications 6.1 (2020): 1-12.</a></li>
+							
+  							<li><a href="https://link.springer.com/article/10.1007/s00422-016-0703-9">Filo, Maurice, Fadi Karameh, and Mariette Awad. "Order reduction and efficient implementation of nonlinear nonlocal cochlear response models." Biological cybernetics 110 (2016): 435-454.</a></li>
+							
+  							<li><a href="https://ieeexplore.ieee.org/document/8263884">Filo, Maurice, and Bassam Bamieh. "Investigating cochlear instabilities using structured stochastic uncertainty." 2017 IEEE 56th Annual Conference on Decision and Control (CDC). IEEE, 2017.</a></li>
+							
+							<li><a href="https://www.sciencedirect.com/science/article/abs/pii/0378595584900923"> Brown, Ann M., and David T. Kemp. "Suppressibility of the 2 f1-f2 stimulated acoustic emissions in gerbil and man." Hearing Research 13.1 (1984): 29-37.</a></li>
+							
+							<li><a href="https://pubs.aip.org/asa/jasa/article-abstract/124/2/1068/840817/Statistics-of-instabilities-in-a-state-space-model?redirectedFrom=fulltext"> Ku, Emery M., Stephen J. Elliott, and Ben Lineton. "Statistics of instabilities in a state space model of the human cochlea." The Journal of the Acoustical Society of America 124.2 (2008): 1068-1079.</a></li>
+							
+							<li><a href="https://pubs.aip.org/asa/jasa/article-abstract/79/5/1472/680042/A-model-for-active-elements-in-cochlear"> Neely, Stephen T., and D. O. Kim. "A model for active elements in cochlear biomechanics." The journal of the acoustical society of America 79.5 (1986): 1472-1480.</a></li>
+							
+						</ul>
+						</p>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

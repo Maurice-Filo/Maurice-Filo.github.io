@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Stochastic Uncertainty</title>
+		<link rel="stylesheet" href="styles.css" type="text/css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+	</head>
+	<body>
+		<table summary="Table for page layout." id="tlayout">
+			<tr valign="top">
+				<td id="layout-menu">
+					<div class="menu-category"><b>Maurice&nbsp;Filo</b></div>
+					<div class="menu-item"><a href="index.html">Home</a></div>
+					<div class="menu-item"><a href="Contact.html">Contact</a></div>
+					<div class="menu-item"><a href="Biography.html">Biography</a></div>
+					<div class="menu-item"><a href="CV/My_CV.pdf">CV</a></div>
+					<div class="menu-category"><b>Research</b></div>
+					<div class="menu-item"><a href="Biomolecular Controllers.html">Biomolecular Controllers</a></div>
+					<div class="menu-item"><a href="Cochlear Modeling.html">Cochlear Modeling</a></div>
+					<div class="menu-item"><a href="Machine Learning.html">Machine Learning</a></div>
+					<div class="menu-item"><a href="Stochastic Uncertainty.html">Stochastic Uncertainty</a></div>
+					<div class="menu-item"><a href="Optimal Control.html">Optimal Control</a></div>
+					<div class="menu-item"><a href="Publications.html">Publications List</a></div>
+					<div class="menu-item"><a href="Talks.html">Talks</a></div>
+					<div class="menu-item"><a href="https://scholar.google.com/citations?hl=en&user=iaeMS58AAAAJ">Google Scholar</a></div>
+					<div class="menu-category"><b>Teaching</b></div>
+					<div class="menu-item"><a href="Dynamical Systems.html">Dynamical Systems (ETH)</a></div>
+					<div class="menu-item"><a href="Advanced Bioengineering.html">Advanced Bioengineering (ETH)</a></div>
+					<div class="menu-item"><a href="Control Systems II.html">Control Systems II (Ashesi)</a></div>
+					<div class="menu-category"><b>Software</b></div>
+					<div class="menu-item"><a href="Biomolecular Controllers App.html">Biomolecular Controllers App</a></div>
+					<div class="menu-item"><a href="Optimization.html">Optimization</a></div>
+					<div class="menu-item"><a href="Cochlear Simulator.html">Cochlea Simulator</a></div>
+				</td>
+				<td id="layout-content">
+					<div id="toptitle"><h1>Structured Stochastic Uncertainty</h1></div>
+					<div class="infoblock">
+						<img src="Research Summaries/Stochastic Uncertainty/G_delta_Perf.png" alt="alt text" height="200px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						
+						<p style="margin-top: 20px;"> Consider the general setting of linear time-invariant (LTI) systems subject to both additive and multiplicative stochastic disturbances. In this framework, the system, denoted as \( M \), is influenced by \( w \), a stationary stochastic process that enters the system additively. Conversely, multiplicative disturbances are modeled through feedback involving time-varying stochastic gains, \( \gamma_1, \ldots, \gamma_n \). These gains are represented as elements of a diagonal matrix, which impacts vector-valued internal signals \( u \) and \( y \). The output signal \( z \) is of particular interest as its variance is used to quantify performance metrics for the system. 
+						We are interested in exploring the conditions necessary for achieving mean-square stability in the closed-loop dynamics of both discrete-time and continuous-time systems. It's important to note that while these investigations apply to general input-output configurations, state-space realizations are considered a specific instance within this broader context. 
+						</p>
+						
+						<p> We assume the multiplicative gains are white in time to simplify the mathematical analysis. The analysis in a discrete-time setting is more straightforward due to the well-defined nature of white noise in discrete intervals. Consequently, we first describe the discrete-time setting. Here, we track the instantaneous covariance matrices of the signals within the loop which we describe through a matrix-valued block diagram. 
+						</p>
+						
+						<table style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: none;">
+							<tr valign="top">
+								<td style="border: none;"><img src="Research Summaries/Stochastic Uncertainty/M_delta_SISO.png" alt="alt text" height="180px" class="centered-image" style="border:0px solid #000; margin-top:10px"/> </td>
+								<td style="border: none;"><img src="Research Summaries/Stochastic Uncertainty/M_delta_cov.gif" alt="alt text" height="180px" class="centered-image" style="border:0px solid #000; margin-top:10px"/> </td>
+							</tr>
+						</table>
+						
+						<p style="margin-top: 20px;">This approach allowed us to introduce a novel operator known as the Loop Gain Operator, defined by:
+						\[
+						\mathbb{L}(X) := \Gamma \circ \left( \sum_{t=0}^\infty M_t X M_t^* \right),
+						\]
+						where \(\circ\) is the Hadamard product, \( \Gamma \) denotes the covariance of the multiplicative stochastic uncertainties and \( M_t \) represents the impluse response of the LTI syste \( \mathcal M \). Consequently we showed the necessary and sufficient condition for mean-square stability is given by
+							\[
+							\rho(\mathbb L) &lt; 1,
+							\]
+						where \(\rho\) represents the spectral radius of the operator. Furthermore, we show that the "Perron eigenmatrix" of \(\mathbb L\) represents a sort of worst-case covariance mode that grows the fastest when the stability condition is violated.
+						</p>
+						
+						<p style="margin-top: 20px;"> In the continuous-time setting, the concept of white noise presents challenges because it is not mathematically well-defined. To address these complexities, we have introduced a new framework termed "stochastic block diagrams." This framework extends beyond the typical scope of stochastic differential equations (SDEs) and is closely related to the lesser-explored stochastic integral equations (SIEs). By conceptualizing white noise as the formal derivative of a Wiener process, we can align the continuous-time approach more closely with its discrete-time counterpart. 
+						</p>
+						
+						<img src="Research Summaries/Stochastic Uncertainty/Equivalence.png" alt="alt text" height="300px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						
+						<p style="margin-top: 20px;"> We needed to integrate stochastic calculus with our stochastic block diagrams, considering various stochastic interpretations such as Itô and Stratonovich. Consequently, we developed a method at the block diagram level that facilitates conversion between these two interpretations. 
+						</p>
+						
+						<img src="Research Summaries/Stochastic Uncertainty/Ito_Strat.png" alt="alt text" height="300px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						
+						<p style="margin-top: 20px;"> Three interesting remarks are worth noting here:</p>
+							
+						<ul>
+						<li><p style="margin-top: 20px;"> <b> Transfer Function of Forward Block \(\mathcal H\):</b> The transfer function of the forward block \( H \) given by
+     \[
+     H(s) = (I - M(s)G)^{-1}M(s),
+     \]
+     where \( G \) is calculated as \( \frac{1}{2}M(0)^{-1}\circ\Gamma \) and \( M(s) \) is the transfer function of \( \mathcal M \).
+								</p></li>
+							
+							<li><p><b>Impact of Initial Impulse Response:</b>
+   If \( M(0) = 0 \), the two block diagrams are identical, indicating no difference between the Itô and Stratonovich interpretations when the impulse response is zero at the initial time. This alignment suggests a form of "strict causality" making the Stratonovich interpretation behave like the Itô interpretation in the mean-square sense.
+							</p></li>
+							
+							<li><p> <b>Temporal Independence and Interpretations:</b>
+   Under the Itô interpretation, the input to the forward block \( du_I \) is temporally independent. In contrast, under the Stratonovich interpretation, the input \( du_S \) is temporally dependent due to the nature of the Stratonovich integral, which anticipates future values. This is a consequence of
+the Stratonovich integral that “looks into the
+future”.</p></li>
+							</ul>
+
+
+							
+							<p>This formulation reestablishes the spectral radius condition for mean-square stability, previously derived for the discrete-time scenario. However, the form of the loop gain operator varies depending on the chosen stochastic interpretation. Specifically, the loop gain operator is defined as:
+
+\[
+\mathbb{L}(X) := \Gamma \circ \left( \int_{t=0}^\infty G(\tau) X G(\tau)^* d\tau \right),
+\]
+
+where \(G\) represents the impulse response of the forward block. For the Itô interpretation, \(G\) is determined by the system \(M\), whereas for the Stratonovich interpretation, it is dictated by the system \(\mathcal{H}\). This distinction illustrates how the loop gain operator adapts to different stochastic frameworks, thereby influencing the stability analysis.
+						</p>
+						
+						<p> References: </p>
+						<p>
+						<ul>
+  							<li><a href="https://ieeexplore.ieee.org/document/8976302">Bamieh, Bassam, and Maurice Filo. "An input–output approach to structured stochastic uncertainty." IEEE Transactions on Automatic Control 65.12 (2020): 5012-5027.
+</a></li>
+							
+							<li><a href="https://ieeexplore.ieee.org/document/8619500"> Filo, Maurice, and Bassam Bamieh. "A block diagram approach to stochastic calculus with application to multiplicative uncertainty analysis." 2018 IEEE Conference on Decision and Control (CDC). IEEE, 2018.</a></li>
+							
+							<li><a href="https://arxiv.org/abs/1806.09091"> Filo, Maurice, and Bassam Bamieh. "An input-output approach to structured stochastic uncertainty in continuous time." arXiv preprint arXiv:1806.09091 (2018).</a></li>
+
+						</ul>
+						</p>
+						
+					</div>
+				
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Biomoleclar Control Systems</title>
+		<link rel="stylesheet" href="styles.css" type="text/css" />
+	</head>
+	<body>
+		<table summary="Table for page layout." id="tlayout">
+			<tr valign="top">
+				<td id="layout-menu">
+					<div class="menu-category"><b>Maurice&nbsp;Filo</b></div>
+					<div class="menu-item"><a href="index.html">Home</a></div>
+					<div class="menu-item"><a href="Contact.html">Contact</a></div>
+					<div class="menu-item"><a href="Biography.html">Biography</a></div>
+					<div class="menu-item"><a href="CV/My_CV.pdf">CV</a></div>
+					<div class="menu-category"><b>Research</b></div>
+					<div class="menu-item"><a href="Biomolecular Controllers.html">Biomolecular Controllers</a></div>
+					<div class="menu-item"><a href="Cochlear Modeling.html">Cochlear Modeling</a></div>
+					<div class="menu-item"><a href="Machine Learning.html">Machine Learning</a></div>
+					<div class="menu-item"><a href="Stochastic Uncertainty.html">Stochastic Uncertainty</a></div>
+					<div class="menu-item"><a href="Optimal Control.html">Optimal Control</a></div>
+					<div class="menu-item"><a href="Publications.html">Publications List</a></div>
+					<div class="menu-item"><a href="Talks.html">Talks</a></div>
+					<div class="menu-item"><a href="https://scholar.google.com/citations?hl=en&user=iaeMS58AAAAJ">Google Scholar</a></div>
+					<div class="menu-category"><b>Teaching</b></div>
+					<div class="menu-item"><a href="Dynamical Systems.html">Dynamical Systems (ETH)</a></div>
+					<div class="menu-item"><a href="Advanced Bioengineering.html">Advanced Bioengineering (ETH)</a></div>
+					<div class="menu-item"><a href="Control Systems II.html">Control Systems II (Ashesi)</a></div>
+					<div class="menu-category"><b>Software</b></div>
+					<div class="menu-item"><a href="Biomolecular Controllers App.html">Biomolecular Controllers App</a></div>
+					<div class="menu-item"><a href="Optimization.html">Optimization</a></div>
+					<div class="menu-item"><a href="Cochlear Simulator.html">Cochlea Simulator</a></div>
+				</td>
+				<td id="layout-content">
+					<div id="toptitle"><h1>Biomolecular Control Systems</h1></div>
+					<div class="infoblock">
+						<img src="Icons_Papers/circuit_animation.gif" alt="alt text" height="200px" class="centered-image"/>
+						
+						<p style="margin-top: 20px;"> Over several decades, control theory has significantly contributed to the design of control systems for engineered machines, influencing the evolution of major engineering disciplines like electrical, mechanical, and chemical engineering. In these fields, designing controllers involves creating electrical circuits or mechanical systems that incorporate components such as resistors, capacitors, inductors, springs, and dampers. <b> More recently, control theory has made its way into molecular biology, particularly within the domains of systems and synthetic biology </b>. It is anticipated that control theory will play a similar role in shaping these emerging fields, just as it has in more traditional engineering and scientific disciplines.
+						</p>
+						
+						<p> Although control theory is a mature field, <b> the complex nature of biomolecular systems has introduced new challenges that require innovative control-theoretic tools </b>. These tools must be tailored to the intricate interactions between biochemical molecules. Designing and implementing an effective control system in this context involves two key challenges. The first challenge is to develop a suitable control law that adheres to a specific architecture. Unlike in digital systems, where implementing a linear PID controller for instance is trivial, <b> biomolecular systems demand controllers that conform to the structure of chemical reaction networks involving positivity constraints, fundamentally nonlinear interactions, and stochastic dynamics </b>. As such the design process becomes significantly more restrictive and complex. The second challenge is <b> ensuring that the controller can be biologically implemented </b>. This involves identifying and integrating the appropriate biological components that will dynamically interact according to the control law. This challenge bridges the gap between theoretical mathematics and practical biology, which is not typically an issue in digital control systems implemented on computers.In biomolecular applications, both challenges are equally critical. Controllers must be specifically structured to be biologically viable and to ensure robust features like disturbance rejection or perfect adaptation. This requires a careful balance of <b> mathematical modeling and practical biological implementation </b>.
+						</p>
+						
+						<img src="Research Summaries/Biomolecular Controllers/Challenges.png" alt="alt text" height="400px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						
+						<p style="margin-top: 20px;"> PID controllers are among the simplest and most widely used controllers for engineered machines. However, implementing PID controllers through chemical reaction networks presents significant challenges. Our objective was to systematically and rationally design a series of such controllers of increasing complexity. This approach allowed us to establish a <b> hierarchy of biomolecular PID controllers, offering a tradeoff between simplicity in the design and separability</b> of the PID components that makes the tuning a little easier and offer a better performance.
+						</p>
+						
+						<img src="Research Summaries/Biomolecular Controllers/PID.png" alt="alt text" height="400px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						
+						<p style="margin-top: 20px;"> Our initial foray into experimenting with biomolecular controllers involved testing them on the <b>cyberloop, a hybrid platform that integrates real biological circuits within cells (in vivo) under a microscope with stochastic computer simulations (in silico) of controllers</b>. This is achieved through light stimulation and fluorescence measurement, allowing individual and simultaneous observation of multiple cells. Our experiments successfully demonstrated that these controllers can <b>robustly maintain a desired setpoint, achieve high dynamic performance, and reduce noise</b>, which often appears as cell-to-cell variability.
+						</p>
+						
+						<img src="Research Summaries/Biomolecular Controllers/Cyberloop.png" alt="alt text" height="400px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						
+						<p style="margin-top: 20px;"> Despite their great promise, the effectiveness of biomolecular PID controllers effectiveness is hindered by several challenges, particularly <b>integral windup</b>. This issue occurs when the integral component of a controller accumulates errors over time, leading to significant overshooting or undershooting of the target setpoint. This is exacerbated in biomolecular systems due to common factors like saturation of molecular concentrations, promoter saturation, and limitations in resources such as enzyme concentrations and energy molecules. Such conditions can cause prolonged poor performance and even system instability. <b>Integral windup can be thought of as a "trauma"</b> to a system caused by a severe disturbance, with its effects persisting for a considerable time even after the disturbance has ceased. In this analogy, implementing an <b>anti-windup strategy acts like a therapeutic intervention</b>, allowing the controller to recover by effectively "forgetting" the disruptive event.
+						We have developed <b>various anti-windup topologies using chemical reaction networks and have also proposed genetic implementations</b>. Additionally, we formulated a theorem that facilitates the analysis of anti-windup dynamics, connecting them to established strategies in control theory.
+						</p>
+						
+						<img src="Research Summaries/Biomolecular Controllers/AW.png" alt="alt text" height="500px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						
+						<p style="margin-top: 20px;">This search for genetic parts echoes the historical quest in electronics engineering that culminated in the transition from vacuum tubes to transistors. In our early efforts, we successfully utilized the <b> hybridization properties of sense/anti-sense RNA to model and implement </b> the first biomolecular PI controller in mammalian cells.
+						</p>
+						
+						<img src="Research Summaries/Biomolecular Controllers/sense_antisense.png" alt="alt text" height="500px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						
+						<p style="margin-top: 20px;"> Subsequently, we explored <b>protein-based implementations</b> of these controllers in mammalian cells, which led us to inteins. Inteins are short protein segments that can autocatalytically cut themselves out of a protein structure while simultaneously rejoining the remaining pieces, known as exteins. A specific type, <b>split inteins</b>, consists of two separate parts, often called IntN and IntC. When activated, these split inteins can form a heterodimer and perform protein splicing reactions.
+						</p>
+						
+						<table style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: none;">
+							<tr valign="top">
+								<td style="border: none; vertical-align: middle;"><img src="Research Summaries/Biomolecular Controllers/Inteins.png" alt="alt text" height="100px" class="centered-image" style="border:0px solid #000; margin-top:10px"/> </td>
+								<td style="border: none;"><img src="Research Summaries/Biomolecular Controllers/Splicing.gif" alt="alt text" height="200px" class="centered-image" style="border:0px solid #000; margin-top:10px"/></td>
+							</tr>
+						</table>
+						
+						<p> The <b>flexibility of intein-based designs</b> has opened up a new research avenue encompassing both theoretical and experimental efforts. Specifically, we have <b>developed a couple of theorems</b> that describe chemical reaction networks capable of achieving robust perfect adaptation with inteins or similar components. Additionally, we have introduced a model reduction recipe that allows for the mathematical analysis of complex genetic circuits. This theoretical approach has guided us in constructing a variety of genetic controllers, all of which have been experimentally demonstrated to achieve robust perfect adaptation.
+						</p>
+						
+						<table style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: none;">
+							<tr valign="top">
+								<td style="border: none; vertical-align: middle;"><img src="Research Summaries/Biomolecular Controllers/ZF.png" alt="alt text" height="400px" class="centered-image" style="border:0px solid #000; margin-top:10px"/> </td>
+								<td style="border: none; vertical-align: middle;"><img src="Research Summaries/Biomolecular Controllers/Splicing Example.gif" alt="alt text" height="200px" class="centered-image" style="border:0px solid #000; margin-top:10px"/></td>
+							</tr>
+						</table>
+						
+						
+						<p style="margin-top: 20px;"> We value inteins greatly, so here’s a token of our appreciation:</p>
+						
+						<p>
+						<video class="video-class" controls>
+    								<source src="Research Summaries/Biomolecular Controllers/Inteins.mp4" type="video/mp4">
+    								Your browser does not support the video tag.
+								</video>
+						</p>
+						
+						<p style="margin-top: 20px;"> The nonlinear dynamics in our controllers have yielded a surprising discovery. <b>A design initially perceived as solely an integral controller was found to also incorporate a proportional controller "hidden" in the nonlinearities</b>. This revelation is especially notable because both PI components are realized through a single actuation mechanism—a feature unprecedented in traditional control theory. This ultra-compact biomolecular PI controller has been successfully demonstrated to improve dynamic performance and reduce noise via simulations and analytical arguments.
+						</p>
+						
+						<img src="Research Summaries/Biomolecular Controllers/HiddenP.png" alt="alt text" height="400px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						
+						<p style="margin-top: 20px;"> To maximize the effectiveness of feedback controllers, proper tuning is essential. To facilitate this, we have developed a framework and a numerical method similar to optimal control. This approach allows for the <b>optimal tuning of nonlinear biomolecular feedback controllers</b>, ensuring they meet specific objectives while adhering to predefined constraints.
+						</p>
+						
+						<img src="Research Summaries/Biomolecular Controllers/opt.png" alt="alt text" height="300px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						
+						<p> References: </p>
+						<p>
+						<ul>
+  							<li><a href="https://www.nature.com/articles/s41467-022-29640-7">Filo, Maurice, Sant Kumar, and Mustafa Khammash. "A hierarchy of biomolecular proportional-integral-derivative feedback controllers for robust perfect adaptation and dynamic performance." Nature communications 13.1 (2022): 2119.</a></li>
+							
+							<li><a href="https://www.biorxiv.org/content/10.1101/2023.10.06.561168v2.abstract"> Filo, Maurice, Ankit Gupta, and Mustafa Khammash. "Anti-Windup Protection Circuits for Biomolecular Integral Controllers." bioRxiv (2023): 2023-10.</a></li>
+							
+							<li><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2122132119">Frei, Timothy, et al. "A genetic mammalian proportional–integral feedback control circuit for robust and precise gene regulation." Proceedings of the National Academy of Sciences 119.00 (2022): e2122132119.</a></li>
+							
+							<li><a href="https://www.nature.com/articles/s41467-023-36863-9">Anastassov, Stanislav, et al. "A cybergenetic framework for engineering intein-mediated integral feedback control systems." Nature Communications 14.1 (2023): 1337.</a></li>
+							
+							<li><a href="https://www.sciencedirect.com/science/article/pii/S0734975024000430?casa_token=gwteyyJtfU8AAAAA:SiSWmLukRp51As1H0QAJFgt8_t4xw0tIXMp_8U9QlBpk_ubbRTbCnuX5EBU06TCGZOP_5i19vA">Anastassov, Stanislav, Maurice Filo, and Mustafa Khammash. "Inteins: A Swiss army knife for synthetic biology." Biotechnology Advances (2024): 108349.</a></li>
+							
+							<li><a href="https://www.sciencedirect.com/science/article/pii/S0958166922002166">Filo, Maurice, Ching-Hsiang Chang, and Mustafa Khammash. "Biomolecular feedback controllers: from theory to applications." Current Opinion in Biotechnology 79 (2023): 102882.</a></li>
+							
+							<li><a href="https://www.biorxiv.org/content/10.1101/2023.04.16.537062v1">Filo, Maurice, Mucun Hou, and M. Khammash. "A hidden proportional feedback mechanism underlies enhanced dynamic performance and noise rejection in sensor-based antithetic integral control." bioRxiv (2023): 2023-04.</a></li>
+							
+							<li><a href="https://ieeexplore.ieee.org/abstract/document/9993268?casa_token=0IwP8N0hLb0AAAAA:n9bGAjQDEbwLzHBN0oLOHp7VWi0P1llZGznNe5iCrL7N4n99OQPijss2qDRtgOXZiOTP1keaAQ">Filo, Maurice, et al. "Exploiting the nonlinear structure of the antithetic integral controller to enhance dynamic performance." 2022 IEEE 61st Conference on Decision and Control (CDC). IEEE, 2022.</a></li>
+							
+							<li><a href="https://ieeexplore.ieee.org/abstract/document/9029430?casa_token=lgj6It8se8wAAAAA:L6jlUS6PFC4ltcAocQtHK9aSvdNGKWUIGGN_SK0TkC-YVmcCUHADQKTL74JS9D2Snslx8thL9A">Filo, Maurice, and Mustafa Khammash. "Optimal parameter tuning of feedback controllers with application to biomolecular antithetic integral control." 2019 IEEE 58th Conference on Decision and Control (CDC). IEEE, 2019.</a></li>
+
+						</ul>
+						</p>
+						
+					</div>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

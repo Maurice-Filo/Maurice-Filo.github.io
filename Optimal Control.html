@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Optimization and Optimal Control</title>
+		<link rel="stylesheet" href="styles.css" type="text/css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+	</head>
+	<body>
+		<table summary="Table for page layout." id="tlayout">
+			<tr valign="top">
+				<td id="layout-menu">
+					<div class="menu-category"><b>Maurice&nbsp;Filo</b></div>
+					<div class="menu-item"><a href="index.html">Home</a></div>
+					<div class="menu-item"><a href="Contact.html">Contact</a></div>
+					<div class="menu-item"><a href="Biography.html">Biography</a></div>
+					<div class="menu-item"><a href="CV/My_CV.pdf">CV</a></div>
+					<div class="menu-category"><b>Research</b></div>
+					<div class="menu-item"><a href="Biomolecular Controllers.html">Biomolecular Controllers</a></div>
+					<div class="menu-item"><a href="Cochlear Modeling.html">Cochlear Modeling</a></div>
+					<div class="menu-item"><a href="Machine Learning.html">Machine Learning</a></div>
+					<div class="menu-item"><a href="Stochastic Uncertainty.html">Stochastic Uncertainty</a></div>
+					<div class="menu-item"><a href="Optimal Control.html">Optimal Control</a></div>
+					<div class="menu-item"><a href="Publications.html">Publications List</a></div>
+					<div class="menu-item"><a href="Talks.html">Talks</a></div>
+					<div class="menu-item"><a href="https://scholar.google.com/citations?hl=en&user=iaeMS58AAAAJ">Google Scholar</a></div>
+					<div class="menu-category"><b>Teaching</b></div>
+					<div class="menu-item"><a href="Dynamical Systems.html">Dynamical Systems (ETH)</a></div>
+					<div class="menu-item"><a href="Advanced Bioengineering.html">Advanced Bioengineering (ETH)</a></div>
+					<div class="menu-item"><a href="Control Systems II.html">Control Systems II (Ashesi)</a></div>
+					<div class="menu-category"><b>Software</b></div>
+					<div class="menu-item"><a href="Biomolecular Controllers App.html">Biomolecular Controllers App</a></div>
+					<div class="menu-item"><a href="Optimization.html">Optimization</a></div>
+					<div class="menu-item"><a href="Cochlear Simulator.html">Cochlea Simulator</a></div>
+				</td>
+				<td id="layout-content">
+					<div id="toptitle"><h1>Optimization/Optimal Control</h1></div>
+					
+					<table style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: none;">
+							<tr valign="top">
+								<td style="border: none;"><img src="Icons_Papers/3d_cartoon.png" alt="alt text" height="200px" class="centered-image"/> </td>
+								<td style="border: none;"><img src="Research Summaries/Optimal Control/Temp_Toy.gif" alt="alt text" height="200px" class="centered-image"/> </td>
+							</tr>
+						</table>
+					
+				  <div class="infoblock">
+						<div class="blocktitlecentered">Path Planning for Mobile Sensors</div>
+						
+					<p style="margin-top: 20px;"> We are interested in designing optimal sensor paths in environments modeled by <b>two or three-dimensional fields, such as fluid flows, temperatures, or concentrations </b>. Given scenarios where only a limited number of measurements are possible and parts of a <b>physics-based model</b> of the field are known, the goal is to enhance the solution of this highly underdetermined inverse problem with dynamic models. A stochastic settings is considered to acknowledge that the fields may be influenced by partially <b>unknown disturbances and boundary conditions</b>.
+							We are interested in two types of sensors: (1) <b>pointwise sensors</b> capable of measuring the fields at a specific location and (2) <b>standoff sensors</b> such as tomographic sensors capable of measuring line integrals of the fields between two locations. Standoff sensors are particularly when the field of interest is inaccessible such as forest fires or other hazardeous regions. 
+						</p>
+						
+						<img src="Research Summaries/Optimal Control/Tornado.gif" alt="alt text" height="200px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						
+						<p style="margin-top: 20px;"> Here is a simple toy example for the pointwise sensor where the goal is to estimate the temperature field on a rod with unknown boundary conditions. We compute the optimal trajectory of the single sensor to maximize the estimation accuracy.
+						</p>
+					  
+					  	<table style="margin-left: auto; margin-right: auto; border-collapse: collapse; border: none;">
+							<tr valign="top">
+								<td style="border: none;"><img src="Research Summaries/Optimal Control/1D Boundary Value Problem.png" alt="alt text" height="100px" class="centered-image" style="border:0px solid #000; margin-top:10px"/> </td>
+							</tr>
+							<tr valign="top">
+								<td style="border: none;"><img src="Research Summaries/Optimal Control/moving_sensor.gif" alt="alt text" height="200px" class="centered-image" style="border:0px solid #000; margin-top:10px"/> </td>
+							</tr>
+						</table>
+					</div>
+						
+					<div class="infoblock">
+						<div class="blocktitlecentered">Numerical Method for Optimal Control: A function-space Approach</div>
+						
+						<p style="margin-top: 20px;"> 
+							Consider the standard optimal control problem. To view it abstractly in function space, we can proceed convert the dynamically constraint optimization into an unconstrained one:
+						</p>
+						<img src="Research Summaries/Optimal Control/OCP.png" alt="alt text" height="300px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						<p style="margin-top: 20px;"> Where \(\mathcal H\) represents the dynamical system, and the inner product is the standard \(L_2\) inner product. Next, one can apply the standard optimization methods such as gradient descent. However, to speed up the convergence without increasing the computational complexity, we adopt a different approach that <b>keeps the cost function and the dynamic constraints separate</b>. In fact our approach has two key ideas. First, the <b>state-input space is transformed to have circular level sets</b>. In the transformed space, the H matrix becomes the identity, and the dynamical constraint depicted by the manifold \( \mathcal M\) is transformed to \(\mathcal M'\).
+						</p>
+						
+						<img src="Research Summaries/Optimal Control/Transform.gif" alt="alt text" height="300px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						
+						<p style="margin-top: 20px;"> The second key idea is to do <b>two different projections sequentially</b>: first project the negative gradient direction onto the tangent space of the manifold (represented by the linearization of the dynamics), and then project onto the manifold to force the dynamical constraints to be satisfied. 
+						</p>
+						
+						<img src="Research Summaries/Optimal Control/manifold_moving.gif" alt="alt text" height="300px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						
+						<p style="margin-top: 20px;"> Step sizes of the projected gradient is taken at each iteration. The preconditioning transformation and the projections allow the iterative method to <b>converge faster than a first order method without requiring the computational complexity of a second order method</b>.
+						</p>
+						
+						<p> References: </p>
+						<p>
+						<ul>
+  							<li><a href="https://ieeexplore.ieee.org/abstract/document/7963450">Filo, Maurice, and Bassam Bamieh. "Sensor motion for optimal estimation in distributed dynamic environments." 2017 American Control Conference (ACC). IEEE, 2017.
+</a></li>
+							
+							<li><a href="https://ieeexplore.ieee.org/abstract/document/8430794"> Filo, Maurice, and Bassam Bamieh. "Function space approach for gradient descent in optimal control." 2018 Annual American Control Conference (ACC). IEEE, 2018.</a></li>
+
+						</ul>
+						</p>
+					
+					</div>
+
+					
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

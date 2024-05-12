@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Machine Learning</title>
+		<link rel="stylesheet" href="styles.css" type="text/css" />
+	</head>
+	<body>
+		<table summary="Table for page layout." id="tlayout">
+			<tr valign="top">
+				<td id="layout-menu">
+					<div class="menu-category"><b>Maurice&nbsp;Filo</b></div>
+					<div class="menu-item"><a href="index.html">Home</a></div>
+					<div class="menu-item"><a href="Contact.html">Contact</a></div>
+					<div class="menu-item"><a href="Biography.html">Biography</a></div>
+					<div class="menu-item"><a href="CV/My_CV.pdf">CV</a></div>
+					<div class="menu-category"><b>Research</b></div>
+					<div class="menu-item"><a href="Biomolecular Controllers.html">Biomolecular Controllers</a></div>
+					<div class="menu-item"><a href="Cochlear Modeling.html">Cochlear Modeling</a></div>
+					<div class="menu-item"><a href="Machine Learning.html">Machine Learning</a></div>
+					<div class="menu-item"><a href="Stochastic Uncertainty.html">Stochastic Uncertainty</a></div>
+					<div class="menu-item"><a href="Optimal Control.html">Optimal Control</a></div>
+					<div class="menu-item"><a href="Publications.html">Publications List</a></div>
+					<div class="menu-item"><a href="Talks.html">Talks</a></div>
+					<div class="menu-item"><a href="https://scholar.google.com/citations?hl=en&user=iaeMS58AAAAJ">Google Scholar</a></div>
+					<div class="menu-category"><b>Teaching</b></div>
+					<div class="menu-item"><a href="Dynamical Systems.html">Dynamical Systems (ETH)</a></div>
+					<div class="menu-item"><a href="Advanced Bioengineering.html">Advanced Bioengineering (ETH)</a></div>
+					<div class="menu-item"><a href="Control Systems II.html">Control Systems II (Ashesi)</a></div>
+					<div class="menu-category"><b>Software</b></div>
+					<div class="menu-item"><a href="Biomolecular Controllers App.html">Biomolecular Controllers App</a></div>
+					<div class="menu-item"><a href="Optimization.html">Optimization</a></div>
+					<div class="menu-item"><a href="Cochlear Simulator.html">Cochlea Simulator</a></div>
+				</td>
+				<td id="layout-content">
+					<div id="toptitle"><h1>Machine Learning</h1></div>
+					
+					
+					<div class="infoblock">
+						<img src="Icons_Papers/nn_animation.gif" alt="alt text" height="200px" class="centered-image"/>
+						
+						<p style="margin-top: 20px;"> Identifying composers from their music has traditionally been a skill reserved for trained musical ears, yet it now poses an intriguing challenge for machine learning and artificial intelligence. Classical music composers each possess a distinctive style, influenced by factors such as rhythmic structure and pitch which affect the speed and mood (be it joyful, passionate, or dramatic) of a piece. These stylistic elements often mirror the composer's lifestyle or the era they lived in. Our research is focused on <b>uncovering the specific structures in piano compositions that define a composer’s style, thus facilitating automatic composer recognition</b>.
+						</p>
+						
+						<p>In our research, we <b>utilize MIDI files</b> as inputs for our composer recognition algorithm. The initial step involves extracting features from these MIDI files, with a focus on <b>n-grams</b>, a technique widely used in natural language processing and statistical language modeling. n-grams are sequences of 'n' items, which in our context might be syllables, letters, or words, depending on the specific application. To illustrate, consider the sentence: "The cat sat on the mat and the cat sat on the chair." From this, we can form 3-grams such as "the cat sat", "cat sat on", "sat on the", "on the mat" and so on. Below is a table summarizing the occurrences of each 3-gram extracted from the sentence.
+						</p>
+						
+						<table style= "margin-left: auto; margin-right: auto">
+        <thead>
+            <tr>
+                <th align="center" bgcolor="#D3D3D3">3-grams</th>
+                <th align="center" bgcolor="#D3D3D3">Occurrences</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>The cat sat</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>cat sat on</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>sat on the</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>on the mat</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>the mat and</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>mat and the</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>and the cat</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>on the chair</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    					</table>
+						
+						<p style="margin-top: 20px;"> We utilize a similar method to create music n-grams that focus on both the melody and bass, considering their pitch variations and rhythmic structures. Initially, preprocessing is carried out on the MIDI files to separate the melody from the bass before constructing the n-grams.
+						</p>
+						
+						<img src="Research Summaries/Machine Learning/Feature_Extraction.png" alt="alt text" height="250px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						
+						<p style="margin-top: 20px;"> Here's a simple example of how music n-grams are formed from a piece of the score of the Lebanese National Anthem:
+						</p>
+						
+						<img src="Research Summaries/Machine Learning/Lebanese_Anthem.png" alt="alt text" height="350px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+						
+						<p style="margin-top: 20px;">We employ a cortical algorithm for feature reduction and classification, conducting our experiments on a database compiled from the Humdrum project library. The MIDI files are processed using a MATLAB MIDI toolbox. Our approach has been tested for classifying unknown composers and identifying distinct musical styles, achieving a recognition rate of 94.4% on our custom database of 1,197 pieces. This success was attained using only 0.1% of the 231,542 features generated, emphasizing the efficacy of the feature reduction procedure. 
+						</p>
+						
+						<p style="margin-top: 20px;">
+						After examining the most significant features that led to the best performance, it was possible to identify five key features as most critical: the occurrence of notes with onset on quarter beats, complete beats, and half beats, along with two n-gram combinations of bass notes. From a musical perspective, these findings suggest that piano composers primarily distinguish their style through the handling of bass notes and rhythmic onsets. <b>While melodies are crucial in defining a composer's style, our results indicate that the arrangement of notes across beats and the development of bass patterns in conjunction with the melody provide deeper insights into a composer’s stylistic signature</b>. This is notable since humans typically focus more on high-pitched melodies than on bass notes, yet composers uniquely define their style through variations in rhythm and bass lines accompanying the same melody. 
+							
+						Further analysis through one-to-one composer classification revealed confusion rates varying significantly, from a high of 17.1% between Mozart and Haydn to as low as 0.5% between Vivaldi and Joplin, with Joplin being distinctly recognized due to his unique era of composition. The challenges in distinguishing between Haydn and Mozart, as well as Beethoven and Chopin, underscore the subtle stylistic similarities shared among these composers, corroborating historical accounts of their influences and stylistic overlaps.
+						</p>
+						
+						<p> References: </p>
+						<p>
+						<ul>
+  							<li><a href="https://link.springer.com/article/10.1007/s40747-017-0052-x"> Hajj, Nadine, Maurice Filo, and Mariette Awad. "Automated composer recognition for multi-voice piano compositions using rhythmic features, n-grams and modified cortical algorithms." Complex &amp Intelligent Systems 4 (2018): 55-65.</a> </li>
+							
+							<li><a href="https://jyx.jyu.fi/bitstream/handle/123456789/49277/1/951-39-1795-9.pdf"> Eerola, Tuomas, and Petri Toiviainen. "MIDI toolbox: MATLAB tools for music research." (2004).</a> </li>
+							
+							<li><a href="https://dl.acm.org/doi/abs/10.5555/275928.275976"> Huron, David. "Humdrum and Kern: Selective feature encoding." Beyond MIDI: The handbook of musical codes. 1997. 375-401.</a> </li>
+							
+							<li><a href="https://dsacl3-2019.github.io/materials/CavnarTrenkle.pdf"> Cavnar, William B., and John M. Trenkle. "N-gram-based text categorization." Proceedings of SDAIR-94, 3rd annual symposium on document analysis and information retrieval. Vol. 161175. 1994.</a> </li>
+
+						</ul>
+						</p>
+					
+					</div>
+
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
