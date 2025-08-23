@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://maurice-filo.github.io/sitemap.xml
