@@ -42,11 +42,32 @@
 					<div class="menu-item"><a href="Cochlear Simulator.html">Cochlea Simulator</a></div>
 				</td>
 				<td id="layout-content">
-					<div id="toptitle"><h1>Machine Learning</h1></div>
+					<img src="Icons_Papers/nn_animation.gif" alt="alt text" height="200px" class="centered-image"/>
+
+					<div id="toptitle"><h1>Generative AI for the Automated Design of Biomolecular Networks</h1></div>
+
+					<div class="infoblock">
+						<p style="margin-top: 20px;"> Biomolecular networks underpin emerging technologies in synthetic biology—from robust biomanufacturing and metabolic engineering to smart therapeutics and cell-based diagnostics—and also provide a mechanistic language for understanding complex dynamics in natural and ecological systems. Yet designing chemical reaction networks (CRNs) that implement a desired dynamical function remains largely manual: while a proposed network can be checked by simulation, the reverse problem of discovering a network from a behavioral specification is difficult, requiring substantial human insight to navigate a vast space of topologies and kinetic parameters with nonlinear and possibly stochastic dynamics. Here we introduce GenAI-Net, a generative AI framework that automates CRN design by coupling an agent that proposes reactions to simulation-based evaluation defined by a user-specified objective. GenAI-Net efficiently produces novel, topologically diverse solutions across multiple design tasks, including dose responses, complex logic gates, classifiers, oscillators, and robust perfect adaptation in deterministic and stochastic settings (including noise reduction). By turning specifications into families of circuit candidates and reusable motifs, GenAI-Net provides a general route to programmable biomolecular circuit design and accelerates the translation from desired function to implementable mechanisms.
+						</p>
+
+						<img src="Research Summaries/Machine Learning/GenAI_Net_Overview.png" alt="alt text" height="500px" class="centered-image" style="border:0px solid #000; margin-top:10px"/>
+
+
+						<p style="margin-top: 20px"> GenAI-Net is a framework for the automatic design of input--output chemical reaction networks (I/O CRNs). 
+							Users begin by selecting a desired design task (e.g. dose–response, oscillators, robust perfect adaptation, logic circuits, and classifiers). 
+							They then specify the intended (bio)chemical operating environment, including the set of chemical species that may appear in the network, the designation of inputs (e.g., externally set signals u1) and outputs (regulated/readout species), and any contextual constraints implied by the application setting (e.g. in vitro,  cellular contexts, or others). 
+							Finally, users choose an appropriate kinetic model class (e.g., mass-action or Michaelis–Menten) and provide (or select) an available reaction library containing M permissible reactions from which candidate networks may be assembled.
+							Given these specifications, GenAI-Net iteratively generates candidate I/O CRNs, simulates their dynamics under the chosen kinetics, and evaluates performance against the task objective using quantitative metrics (e.g. time-domain error and frequency-domain/Fourier features). These evaluations provide a learning signal used to train the agent, closing the design loop: the agent proposes new networks conditioned on prior performance, progressively improving the generated candidates. 
+							The output of a design run is a batch of I/O CRNs sampled from the learned search policy, enabling downstream selection, analysis, and implementation.
+							GenAI-Net returns multiple top-ranked candidate I/O CRNs, each represented by a specific reaction topology, parameters, and its corresponding predicted input--output behavior. Diversity graphs can used to monitor the topological diversity of the generated I/O CRNs. 
+							The example to the right highlights how topologically distinct candidate networks can realize similar target specifications (e.g., matching a desired dose–response curve) while differing in internal reaction structure, enabling users to trade off performance, simplicity, and implementability when choosing a final design. 
+						</p>
+
+					</div>
 					
+					<div id="toptitle"><h1>Machine Learning in Music</h1></div>
 					
 					<div class="infoblock">
-						<img src="Icons_Papers/nn_animation.gif" alt="alt text" height="200px" class="centered-image"/>
 						
 						<p style="margin-top: 20px;"> Identifying composers from their music has traditionally been a skill reserved for trained musical ears, yet it now poses an intriguing challenge for machine learning and artificial intelligence. Classical music composers each possess a distinctive style, influenced by factors such as rhythmic structure and pitch which affect the speed and mood (be it joyful, passionate, or dramatic) of a piece. These stylistic elements often mirror the composer's lifestyle or the era they lived in. Our research is focused on <b>uncovering the specific structures in piano compositions that define a composer’s style, thus facilitating automatic composer recognition</b>.
 						</p>

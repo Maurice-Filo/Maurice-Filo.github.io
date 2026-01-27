@@ -1,0 +1,11 @@
+In home page:
+- update CV
+- update GenAI-Net
+- update Cell Systems paper
+
+In biomolecular controllers:
+- update Cell Systems paper & remove biorxiv version from list
+
+Publications:
+- update GenAI-Net
+- update Cell Systems paper & remove biorxiv
