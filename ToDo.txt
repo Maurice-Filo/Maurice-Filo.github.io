@@ -1,11 +1,9 @@
 In home page:
 - update CV
-- update GenAI-Net
-- update Cell Systems paper
+- update Cell Systems paper when published
 
 In biomolecular controllers:
-- update Cell Systems paper & remove biorxiv version from list
+- update Cell Systems paper when published & remove biorxiv version from list
 
 Publications:
-- update GenAI-Net
-- update Cell Systems paper & remove biorxiv
+- update Cell Systems paper when published & remove biorxiv
