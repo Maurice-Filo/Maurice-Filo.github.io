@@ -1,0 +1,48 @@
+<table>
+							<tr valign="top">
+								<td><img src="assets/images/publications/3d-cartoon.png" alt="Research illustration" class="centered-image" loading="lazy"> </td>
+								<td><img src="assets/images/research/optimal-control/temp-toy.gif" alt="Research illustration" class="centered-image" loading="lazy"> </td>
+							</tr>
+						</table><div class="infoblock">
+						<div class="blocktitlecentered">Path Planning for Mobile Sensors</div>
+						
+					<p> We are interested in designing optimal sensor paths in environments modeled by <b>two or three-dimensional fields, such as fluid flows, temperatures, or concentrations </b>. Given scenarios where only a limited number of measurements are possible and parts of a <b>physics-based model</b> of the field are known, the goal is to enhance the solution of this highly underdetermined inverse problem with dynamic models. A stochastic settings is considered to acknowledge that the fields may be influenced by partially <b>unknown disturbances and boundary conditions</b>.
+							We are interested in two types of sensors: (1) <b>pointwise sensors</b> capable of measuring the fields at a specific location and (2) <b>standoff sensors</b> such as tomographic sensors capable of measuring line integrals of the fields between two locations. Standoff sensors are particularly when the field of interest is inaccessible such as forest fires or other hazardeous regions. 
+						</p>
+						
+						<img src="assets/images/research/optimal-control/tornado.gif" alt="Research illustration" class="centered-image" loading="lazy">
+						
+						<p> Here is a simple toy example for the pointwise sensor where the goal is to estimate the temperature field on a rod with unknown boundary conditions. We compute the optimal trajectory of the single sensor to maximize the estimation accuracy.
+						</p>
+					  
+					  	<table>
+							<tr valign="top">
+								<td><img src="assets/images/research/optimal-control/1d-boundary-value-problem.png" alt="Research illustration" class="centered-image" loading="lazy"> </td>
+							</tr>
+							<tr valign="top">
+								<td><img src="assets/images/research/optimal-control/moving-sensor.gif" alt="Research illustration" class="centered-image" loading="lazy"> </td>
+							</tr>
+						</table>
+					</div><div class="infoblock">
+						<div class="blocktitlecentered">Numerical Method for Optimal Control: A function-space Approach</div>
+						
+						<p> 
+							Consider the standard optimal control problem. To view it abstractly in function space, we can proceed convert the dynamically constraint optimization into an unconstrained one:
+						</p>
+						<img src="assets/images/research/optimal-control/ocp.png" alt="Research illustration" class="centered-image" loading="lazy">
+						<p> Where \(\mathcal H\) represents the dynamical system, and the inner product is the standard \(L_2\) inner product. Next, one can apply the standard optimization methods such as gradient descent. However, to speed up the convergence without increasing the computational complexity, we adopt a different approach that <b>keeps the cost function and the dynamic constraints separate</b>. In fact our approach has two key ideas. First, the <b>state-input space is transformed to have circular level sets</b>. In the transformed space, the H matrix becomes the identity, and the dynamical constraint depicted by the manifold \( \mathcal M\) is transformed to \(\mathcal M'\).
+						</p>
+						
+						<img src="assets/images/research/optimal-control/transform.gif" alt="Research illustration" class="centered-image" loading="lazy">
+						
+						<p> The second key idea is to do <b>two different projections sequentially</b>: first project the negative gradient direction onto the tangent space of the manifold (represented by the linearization of the dynamics), and then project onto the manifold to force the dynamical constraints to be satisfied. 
+						</p>
+						
+						<img src="assets/images/research/optimal-control/manifold-moving.gif" alt="Research illustration" class="centered-image" loading="lazy">
+						
+						<p> Step sizes of the projected gradient is taken at each iteration. The preconditioning transformation and the projections allow the iterative method to <b>converge faster than a first order method without requiring the computational complexity of a second order method</b>.
+						</p>
+						
+						<p> References: </p>
+						<p>
+						</p><div data-paper="paper-22"></div><div data-paper="paper-21"></div></div>

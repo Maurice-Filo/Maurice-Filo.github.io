@@ -1,0 +1,21 @@
+{
+  "name": "Maurice Filo",
+  "role": "Assistant Professor",
+  "institution": "University of Cambridge",
+  "intro": "Research at the intersection of control theory, dynamical systems, synthetic biology, and artificial intelligence.",
+  "scholar": "https://scholar.google.com/citations?hl=en&user=iaeMS58AAAAJ",
+  "cv": "downloads/cv/my-cv.pdf",
+  "department": "Department of Engineering",
+  "division": "Information Engineering Division",
+  "group": "Control Group",
+  "focus": "Control theory · Dynamical systems · Synthetic biology · AI",
+  "email_display": "mf916 [at] cam [dot] ac [dot] uk",
+  "university_url": "https://www.cam.ac.uk/",
+  "department_url": "https://www.eng.cam.ac.uk/",
+  "division_url": "https://divf.eng.cam.ac.uk/",
+  "group_url": "https://www-control.eng.cam.ac.uk/",
+  "college": "Gonville and Caius College",
+  "college_url": "https://www.cai.cam.ac.uk/",
+  "hero_image": "assets/images/site/research-hero.webp",
+  "portrait": "assets/images/profile/portrait.jpg"
+}

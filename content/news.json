@@ -1,0 +1,104 @@
+[
+  {
+    "date": "5 Oct 2026",
+    "datetime": "2026-10-05",
+    "headline": "Joining Gonville and Caius College as a Fellow",
+    "html": "Joined <a href=\"https://www.cai.cam.ac.uk/\">Gonville and Caius College</a>, <a href=\"https://www.cam.ac.uk/\">University of Cambridge</a>, as a Fellow on 5 October 2026."
+  },
+  {
+    "date": "1 Sep 2026",
+    "datetime": "2026-09-01",
+    "headline": "Joining the University of Cambridge as Assistant Professor",
+    "html": "Joined the <a href=\"https://www.cam.ac.uk/\">University of Cambridge</a> as Assistant Professor in the <a href=\"https://www.eng.cam.ac.uk/\">Department of Engineering</a>, <a href=\"https://divf.eng.cam.ac.uk/\">Information Engineering Division</a>, <a href=\"https://www-control.eng.cam.ac.uk/\">Control Group</a>, on 1 September 2026."
+  },
+  {
+    "date": "2026 Feb",
+    "headline": "Teaching dynamical systems at ETH Zurich",
+    "html": "Teaching Introduction to Dynamical Systems at ETH Zurich with Prof. Khammash "
+  },
+  {
+    "date": "2025 Dec",
+    "headline": "Presenting sparse biochemical network design at CDC 2025",
+    "html": "<a href=\"downloads/presentations/cdc2025-presentation.pdf\">Gave a talk </a> at CDC, Rio de Janeiro "
+  },
+  {
+    "date": "2025 May",
+    "headline": "Invited seminar on genetic controllers at Cambridge",
+    "html": "<a href=\"https://talks.cam.ac.uk/talk/index/232525\">Invited talk</a> at University of Cambridge on Engineering Genetic Controllers to Accelerate Adaptation and Attenuate Cellular Noise "
+  },
+  {
+    "date": "2024 Nov",
+    "headline": "Teaching control systems at Ashesi University",
+    "html": "Another round of teaching Control Systems at <a href=\"https://www.ashesi.edu.gh/\">Ashesi University</a> in Ghana as part of the <a href=\"https://eth4d.ethz.ch/\"> ETH for Development  </a><a href=\"https://eth4d.ethz.ch/Learning/AshesiETH-Master.html\"> Masters Program </a>"
+  },
+  {
+    "date": "2024 Jan",
+    "headline": "Promotion to Senior Research Scientist at ETH Zurich",
+    "html": "Promoted to Senior Research Scientist in BioSystems Science and Engineering, <a href=\"https://ethz.ch/en.html\">ETH Zurich</a> "
+  },
+  {
+    "date": "2023 Nov",
+    "headline": "Teaching control systems through the Ashesi–ETH programme",
+    "html": "Taught Control Systems at <a href=\"https://www.ashesi.edu.gh/\">Ashesi University</a> in Ghana as part of the <a href=\"https://eth4d.ethz.ch/\"> ETH for Development  </a><a href=\"https://eth4d.ethz.ch/Learning/AshesiETH-Master.html\"> Masters Program </a>"
+  },
+  {
+    "date": "2023 Oct",
+    "headline": "Contributing to an SNSF Advanced Grant on genetic control systems",
+    "html": "Our group received the <a href=\"https://data.snf.ch/grants/grant/216505\"> SNSF Advanced Grant</a>, which I contributed to, titled: \"Theory and Design of Advanced Genetically Engineered Control Systems\""
+  },
+  {
+    "date": "2023 Jul",
+    "headline": "Filing a patent on intein-based controllers",
+    "html": "Filed a patent titled \"Intein-based controllers\" "
+  },
+  {
+    "date": "2022 Dec",
+    "headline": "Organising an invited CDC session on biological controllers",
+    "html": "Organized an invited session at the <a href=\"http://cdc2022.ieeecss.org\">61st IEEE Conference on Decision and Control in Mexico </a> titled  \"Biological Controllers\""
+  },
+  {
+    "date": "2021",
+    "headline": "Biomolecular PID invention recognised by the ETH Spark Award",
+    "html": "Our PID patent ranked among the <a href=\"https://ethz.ch/en/industry/researchers/ip/sparkaward/2021.html\"> Top 20 Inventions Spark Award </a> "
+  },
+  {
+    "date": "2020 Nov",
+    "headline": "Filing a patent on cellular network control",
+    "html": "Filed a patent titled \"Expression system and method for controlling a network in a cell and cell comprising the expression system\" "
+  },
+  {
+    "date": "2019 Jan",
+    "headline": "Receiving the CCDC Best PhD Thesis Award",
+    "html": " Received the <a href=\"https://www.ccdc.ucsb.edu/content/ccdc-best-phd-thesis-award\">Best PhD Thesis Award</a>, \n\t\t\t\t\t\t<a href=\"https://www.ccdc.ucsb.edu/\">Center for Control, Dynamical-Systems &amp; Computations (CCDC)</a>  "
+  },
+  {
+    "date": "2018 Sep",
+    "headline": "Joining ETH Zurich as a postdoctoral researcher",
+    "html": "Started Postdoc in BioSystems Science and Engineering, <a href=\"https://ethz.ch/en.html\">ETH Zurich</a> "
+  },
+  {
+    "date": "2018 Jun",
+    "headline": "Completing a PhD at UC Santa Barbara",
+    "html": "Completed PhD in Mechanical Engineering, <a href=\"https://www.ucsb.edu/\">University of California, Santa Barbara</a>"
+  },
+  {
+    "date": "2017",
+    "headline": "Completing an MS in Mechanical Engineering",
+    "html": "Completed MS in Mechanical Engineering, <a href=\"https://www.ucsb.edu/\">University of California, Santa Barbara</a>"
+  },
+  {
+    "date": "2015",
+    "headline": "Receiving the UCSB Best Teaching Assistant Award",
+    "html": "Received the <a href=\"https://me.ucsb.edu/news/looking-back-best-phd-best-ta-outstanding-faculty-and-distinguished-alumnus\">Best Teacher Assistant</a> Award at the <a href=\"https://me.ucsb.edu/\">Department of Mechanical Engineering, UCSB</a>"
+  },
+  {
+    "date": "2013 Oct",
+    "headline": "Receiving the CCDC Outstanding Scholar Fellowship",
+    "html": "Received the <a href=\"https://www.ccdc.ucsb.edu/content/ccdc-outstanding-scholar-fellowship\">CCDC Outstanding Scholar Fellowship</a>"
+  },
+  {
+    "date": "2013",
+    "headline": "Completing an MS at the American University of Beirut",
+    "html": "Completed MS in Electrical and Computer Engineering, <a href=\"http://www.aub.edu.lb/pages/default.aspx\">American University of Beirut</a>"
+  }
+]

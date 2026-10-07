@@ -1,0 +1,26 @@
+{
+  "topics": [
+    "Biomolecular Controllers",
+    "Cochlear Modeling",
+    "Machine Learning",
+    "Stochastic Uncertainty",
+    "Optimal Control"
+  ],
+  "courses": [
+    "Dynamical Systems",
+    "Advanced Bioengineering",
+    "Control Systems II"
+  ],
+  "software": [
+    "Biomolecular Controllers App",
+    "Optimization",
+    "Cochlear Simulator"
+  ],
+  "topic_images": {
+    "Biomolecular Controllers": "assets/images/topics/biomolecular-controllers.svg",
+    "Cochlear Modeling": "assets/images/topics/cochlear-modeling.svg",
+    "Machine Learning": "assets/images/topics/machine-learning.svg",
+    "Stochastic Uncertainty": "assets/images/topics/stochastic-uncertainty.svg",
+    "Optimal Control": "assets/images/topics/optimal-control.svg"
+  }
+}

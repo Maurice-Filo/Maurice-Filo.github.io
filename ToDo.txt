@@ -1,9 +1,0 @@
-In home page:
-- update CV
-- update Cell Systems paper when published
-
-In biomolecular controllers:
-- update Cell Systems paper when published & remove biorxiv version from list
-
-Publications:
-- update Cell Systems paper when published & remove biorxiv

@@ -1,0 +1,62 @@
+{
+  "Dynamical Systems": {
+    "file": "pages/dynamical-systems.html",
+    "title": "Dynamical Systems"
+  },
+  "Cochlear Simulator": {
+    "file": "pages/cochlear-simulator.html",
+    "title": "Cochlear Simulator"
+  },
+  "Biomolecular Controllers App": {
+    "file": "pages/biomolecular-controllers-app.html",
+    "title": "Biomolecular Controllers App"
+  },
+  "Optimal Control": {
+    "file": "pages/optimal-control.html",
+    "title": "Optimal Control"
+  },
+  "Biography": {
+    "file": "pages/biography.html",
+    "title": "Biography"
+  },
+  "Optimization": {
+    "file": "pages/optimization.html",
+    "title": "Optimization"
+  },
+  "Control Systems II": {
+    "file": "pages/control-systems-ii.html",
+    "title": "Control Systems II"
+  },
+  "Publications": {
+    "file": "pages/publications.html",
+    "title": "Publications"
+  },
+  "Cochlear Modeling": {
+    "file": "pages/cochlear-modeling.html",
+    "title": "Cochlear Modeling"
+  },
+  "Stochastic Uncertainty": {
+    "file": "pages/stochastic-uncertainty.html",
+    "title": "Stochastic Uncertainty"
+  },
+  "Contact": {
+    "file": "pages/contact.html",
+    "title": "Contact"
+  },
+  "Advanced Bioengineering": {
+    "file": "pages/advanced-bioengineering.html",
+    "title": "Advanced Bioengineering"
+  },
+  "Biomolecular Controllers": {
+    "file": "pages/biomolecular-controllers.html",
+    "title": "Biomolecular Controllers"
+  },
+  "Machine Learning": {
+    "file": "pages/machine-learning.html",
+    "title": "Machine Learning"
+  },
+  "Talks": {
+    "file": "pages/talks.html",
+    "title": "Talks"
+  }
+}

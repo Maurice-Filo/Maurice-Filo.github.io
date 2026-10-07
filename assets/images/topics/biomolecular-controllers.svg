@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#e1efe7"/><stop offset="1" stop-color="#f2f3df"/></linearGradient><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5L0 7" fill="#347f70"/></marker></defs>
+<rect width="480" height="240" fill="url(#bg)"/>
+<!-- Chemical species and reaction arrows; decorative network, not a specific mechanism. -->
+<g fill="none" stroke="#347f70" stroke-width="2.5" marker-end="url(#arrow)"><path d="M107 65H191"/><path d="M241 65H330"/><path d="M353 84C355 123 270 135 234 109"/><path d="M194 83C164 116 121 112 96 84"/></g>
+<g stroke="#eaf3e9" stroke-width="4"><circle cx="83" cy="65" r="22" fill="#2b7769"/><circle cx="216" cy="65" r="22" fill="#7eac9a"/><circle cx="355" cy="65" r="22" fill="#b49a55"/></g>
+<!-- DNA backbone with promoter, coding regions, and terminator. -->
+<path d="M62 175H421" stroke="#7b9e8b" stroke-width="3"/>
+<path d="M82 175V149H107" fill="none" stroke="#347f70" stroke-width="3" marker-end="url(#arrow)"/>
+<path d="M119 161H175L188 175L175 189H119Z" fill="#2b7769"/>
+<path d="M224 161H280L293 175L280 189H224Z" fill="#83ad98"/>
+<path d="M329 161H361L374 175L361 189H329Z" fill="#b49a55"/>
+<path d="M401 175V154M393 154H409" stroke="#347f70" stroke-width="3"/>
+<!-- Coupling between genetic expression and chemical reaction network. -->
+<path d="M154 150V121C154 103 188 112 200 91M355 90V144" fill="none" stroke="#347f70" stroke-width="2" stroke-dasharray="4 5" marker-end="url(#arrow)"/>
+</svg>

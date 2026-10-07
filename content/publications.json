@@ -1,0 +1,303 @@
+[
+  {
+    "id": "paper-1",
+    "title": "Engineering Sensor-Based Antithetic Integral Controllers for Enhanced Dynamic Performance and Noise Attenuation",
+    "url": "https://www.cell.com/cell-systems/fulltext/S2405-4712(25)00345-X",
+    "authors": "Maurice Filo*, Stephanie Aoki*, Mucun Hou*, Stanislav Anastassov, and Mustafa Khammash",
+    "venue": "Cell Systems, 2026, Link to Poster",
+    "image": "assets/images/publications/saif.png",
+    "topics": [
+      "Biomolecular Controllers"
+    ],
+    "featured": true,
+    "links": [
+      {
+        "label": "Link to Poster",
+        "url": "downloads/posters/saif/poster.pdf"
+      }
+    ],
+    "year": 2026
+  },
+  {
+    "id": "paper-2",
+    "title": "GenAI-Net: A Generative AI Framework for Automated Biomolecular Network Design",
+    "url": "https://www.science.org/doi/10.1126/sciadv.aeh8819",
+    "authors": "Maurice Filo*, Nicolo Rossi*, Zhou Fang*, and Mustafa Khammash",
+    "venue": "Science Advances, 2026",
+    "image": "assets/images/publications/genai-net.png",
+    "topics": [
+      "Machine Learning"
+    ],
+    "featured": true,
+    "links": [],
+    "year": 2026
+  },
+  {
+    "id": "paper-13",
+    "title": "Engineering Cybergenetic Cell-Based Therapies",
+    "url": "https://www.biorxiv.org/content/10.64898/2026.01.16.699922v2",
+    "authors": "Ching-Hsiang Chang, Asterios Arampatzis, Samuel Balula, Mucun Hou, Maurice Filo, Mingzhe Chen, Federica Cella, and Mustafa Khammash",
+    "venue": "BiorXiv, 2026",
+    "image": "assets/images/publications/celltherapy.png",
+    "topics": [
+      "Biomolecular Controllers"
+    ],
+    "featured": false,
+    "links": [],
+    "year": 2026
+  },
+  {
+    "id": "paper-3",
+    "title": "Realizing Reduced and Sparse Biochemical Reaction Networks from Dynamics",
+    "url": "https://ieeexplore.ieee.org/abstract/document/11312204",
+    "authors": "Maurice Filo and Mustafa Khammash",
+    "venue": "IEEE CDC 2025",
+    "image": "assets/images/publications/pertim.png",
+    "topics": [
+      "Biomolecular Controllers"
+    ],
+    "featured": true,
+    "links": [],
+    "year": 2025
+  },
+  {
+    "id": "paper-4",
+    "title": "An Input–Output Approach to Structured Stochastic Uncertainty in Continuous Time",
+    "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/rnc.7919",
+    "authors": "Maurice Filo and Bassam Bamieh",
+    "venue": "International Journal of Robust and Nonlinear Control, 2025",
+    "image": "assets/images/publications/stoch-uncert.png",
+    "topics": [
+      "Stochastic Uncertainty"
+    ],
+    "featured": true,
+    "links": [],
+    "year": 2025
+  },
+  {
+    "id": "paper-5",
+    "title": "Anti-windup strategies for biomolecular control systems facilitated by model reduction theory for sequestration networks",
+    "url": "https://www.science.org/doi/10.1126/sciadv.adl5439",
+    "authors": "Maurice Filo*, Ankit Gupta* and Mustafa Khammash",
+    "venue": "Science Advances, 2024",
+    "image": "assets/images/publications/diabetes.png",
+    "topics": [
+      "Biomolecular Controllers"
+    ],
+    "featured": true,
+    "links": [],
+    "year": 2024
+  },
+  {
+    "id": "paper-6",
+    "title": "Inteins: A Swiss Army Knife for Synthetic Biology",
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0734975024000430",
+    "authors": "Stanislav Anastassov, Maurice Filo and Mustafa Khammash",
+    "venue": "Biotechnology Advances, 2024",
+    "image": "assets/images/publications/swiss-knife.png",
+    "topics": [
+      "Biomolecular Controllers"
+    ],
+    "featured": true,
+    "links": [],
+    "year": 2024
+  },
+  {
+    "id": "paper-7",
+    "title": "Biomolecular Feedback Controllers: from Theory to Applications",
+    "url": "https://www.sciencedirect.com/science/article/pii/S0958166922002166",
+    "authors": "Maurice Filo, Ching-Hsiang Chang and Mustafa Khammash",
+    "venue": "Current Opinion in Biotechnology, 2023",
+    "image": "assets/images/publications/biomolecular-controllers.png",
+    "topics": [
+      "Biomolecular Controllers"
+    ],
+    "featured": true,
+    "links": [],
+    "year": 2023
+  },
+  {
+    "id": "paper-8",
+    "title": "A Cybergenetic Framework for Engineering Intein-Mediated Integral Feedback Control Systems",
+    "url": "https://www.nature.com/articles/s41467-023-36863-9",
+    "authors": "Stanislav Anastassov*, Maurice Filo*, Ching-Hsiang Chang and Mustafa Khammash",
+    "venue": "Nature Communications, 2023",
+    "image": "assets/images/publications/inteins.png",
+    "topics": [
+      "Biomolecular Controllers"
+    ],
+    "featured": true,
+    "links": [],
+    "year": 2023
+  },
+  {
+    "id": "paper-9",
+    "title": "A Hierarchy of Biomolecular Proportional-Integral-Derivative Feedback Controllers for Robust Perfect Adaptation and Dynamic Performance",
+    "url": "https://www.nature.com/articles/s41467-022-29640-7",
+    "authors": "Maurice Filo, Sant Kumar and Mustafa Khammash",
+    "venue": "Nature Communications, 2022",
+    "image": "assets/images/publications/pid-hierarchy.png",
+    "topics": [
+      "Biomolecular Controllers"
+    ],
+    "featured": false,
+    "links": [],
+    "year": 2022
+  },
+  {
+    "id": "paper-10",
+    "title": "A Genetic Mammalian Proportional–Integral Feedback Control Circuit for Robust and Precise Gene Regulation",
+    "url": "https://www.pnas.org/doi/full/10.1073/pnas.2122132119",
+    "authors": "Timothy Frei*, Ching-Hsiang Chang*, Maurice Filo, Asterios Arampatzis and Mustafa Khammash",
+    "venue": "Proceedings of the National Academy of Sciences (PNAS), 2022",
+    "image": "assets/images/publications/mammalian-pi.png",
+    "topics": [
+      "Biomolecular Controllers"
+    ],
+    "featured": false,
+    "links": [],
+    "year": 2022
+  },
+  {
+    "id": "paper-11",
+    "title": "Exploiting the Nonlinear Structure of the Antithetic Integral Controller to Enhance Dynamic Performance",
+    "url": "https://ieeexplore.ieee.org/document/9993268",
+    "authors": "Maurice Filo, Sant Kumar, Stanislav Anastassov and Mustafa Khammash",
+    "venue": "IEEE 61st Conference on Decision and Control (CDC), 2022",
+    "image": "assets/images/publications/exploiting.png",
+    "topics": [
+      "Biomolecular Controllers"
+    ],
+    "featured": false,
+    "links": [],
+    "year": 2022
+  },
+  {
+    "id": "paper-16",
+    "title": "Investigating Instabilities in the Mammalian Cochlea Using a Stochastic Uncertainty Model",
+    "url": "https://ieeexplore.ieee.org/abstract/document/9090851",
+    "authors": "Maurice Filo and Bassam Bamieh",
+    "venue": "IEEE Transactions on Molecular, Biological and Multi-Scale Communications, 2020",
+    "image": "assets/images/publications/stochastic-simulation.png",
+    "topics": [
+      "Cochlear Modeling",
+      "Stochastic Uncertainty"
+    ],
+    "featured": false,
+    "links": [],
+    "year": 2020
+  },
+  {
+    "id": "paper-19",
+    "title": "An Input–Output Approach to Structured Stochastic Uncertainty",
+    "url": "https://ieeexplore.ieee.org/document/8976302",
+    "authors": "Bassam Bamieh and Maurice Filo",
+    "venue": "IEEE Transactions on Automatic Control, 2020",
+    "image": "assets/images/publications/discrete-unc.png",
+    "topics": [
+      "Stochastic Uncertainty"
+    ],
+    "featured": false,
+    "links": [],
+    "year": 2020
+  },
+  {
+    "id": "paper-12",
+    "title": "Optimal Parameter Tuning of Feedback Controllers with Application to Biomolecular Antithetic Integral Control",
+    "url": "https://ieeexplore.ieee.org/document/9029430",
+    "authors": "Maurice Filo and Mustafa Khammash",
+    "venue": "IEEE 58th Conference on Decision and Control (CDC), 2019",
+    "image": "assets/images/publications/tuning.png",
+    "topics": [
+      "Biomolecular Controllers"
+    ],
+    "featured": false,
+    "links": [],
+    "year": 2019
+  },
+  {
+    "id": "paper-20",
+    "title": "A Block Diagram Approach to Stochastic Calculus with Application to Multiplicative Uncertainty Analysis",
+    "url": "https://ieeexplore.ieee.org/document/8619500",
+    "authors": "Maurice Filo and Bassam Bamieh",
+    "venue": "IEEE 57th Conference on Decision and Control (CDC), 2018",
+    "image": "assets/images/publications/cont-stoch-unc.png",
+    "topics": [
+      "Stochastic Uncertainty"
+    ],
+    "featured": false,
+    "links": [],
+    "year": 2018
+  },
+  {
+    "id": "paper-21",
+    "title": "Function Space Approach for Gradient Descent in Optimal Control",
+    "url": "https://ieeexplore.ieee.org/abstract/document/8430794",
+    "authors": "Maurice Filo and Bassam Bamieh",
+    "venue": "American Control Conference (ACC), 2018",
+    "image": "assets/images/publications/3d-cartoon.png",
+    "topics": [
+      "Optimal Control"
+    ],
+    "featured": false,
+    "links": [],
+    "year": 2018
+  },
+  {
+    "id": "paper-15",
+    "title": "Automated Composer Recognition for Multi-Voice Piano Compositions Using Rhythmic Features, n-grams and Modified Cortical Algorithms",
+    "url": "https://link.springer.com/article/10.1007/s40747-017-0052-x",
+    "authors": "Nadine Hajj, Maurice Filo and Mariette Awad",
+    "venue": "Complex and Intelligent Systems, 2017",
+    "image": "assets/images/publications/piano-sheet.png",
+    "topics": [
+      "Machine Learning"
+    ],
+    "featured": false,
+    "links": [],
+    "year": 2017
+  },
+  {
+    "id": "paper-18",
+    "title": "Investigating Cochlear Instabilities Using Structured Stochastic Uncertainty",
+    "url": "https://ieeexplore.ieee.org/abstract/document/8263884",
+    "authors": "Maurice Filo and Bassam Bamieh",
+    "venue": "IEEE 56nd Annual Conference on Decision and Control (CDC), 2017",
+    "image": "assets/images/publications/micromechanics.png",
+    "topics": [
+      "Cochlear Modeling",
+      "Stochastic Uncertainty"
+    ],
+    "featured": false,
+    "links": [],
+    "year": 2017
+  },
+  {
+    "id": "paper-22",
+    "title": "Sensor Motion for Optimal Estimation in Distributed Dynamic Environments",
+    "url": "https://ieeexplore.ieee.org/abstract/document/7963450",
+    "authors": "Maurice Filo and Bassam Bamieh",
+    "venue": "American Control Conference (ACC), 2017",
+    "image": "assets/images/publications/sensor-domains.png",
+    "topics": [
+      "Optimal Control"
+    ],
+    "featured": false,
+    "links": [],
+    "year": 2017
+  },
+  {
+    "id": "paper-17",
+    "title": "Order Reduction and Efficient Implementation of Nonlinear Nonlocal Cochlear Response Models",
+    "url": "https://link.springer.com/article/10.1007/s00422-016-0703-9",
+    "authors": "Maurice Filo, Fadi Karameh and Mariette Awad",
+    "venue": "Biological Cybernetics, 2016",
+    "image": "assets/images/publications/reduction-cochlea.png",
+    "topics": [
+      "Cochlear Modeling"
+    ],
+    "featured": false,
+    "links": [],
+    "year": 2016
+  }
+]
